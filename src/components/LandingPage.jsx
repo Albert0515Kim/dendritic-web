@@ -4,9 +4,9 @@ const Landing = () => {
   return (
     <div className='text-white h-screen bg-black px-8 py-16 flex items-center justify-center'>
       <div className='max-w-[1200px] mx-auto'>
-        <div className='flex items-center space-x-16'>
-          <div className='flex-1'>
-            <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 whitespace-nowrap'>
+        <div className='flex flex-col md:flex-row items-center md:space-x-16'>
+          <div className='flex-1 text-center md:text-left'>
+            <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
               Dendritic Learning
             </h1>
             <p className='md:text-2xl text-xl font-bold text-gray-500'>
@@ -16,8 +16,8 @@ const Landing = () => {
               Learn More
             </button>
           </div>
-          <div>
-            <img src='./LandingImg.png' alt='Landing' className='w-full h-auto max-w-[600px]' />
+          <div className='w-full md:w-auto mt-8 md:mt-0'>
+            <img src='./LandingImg.png' alt='Landing' className='w-full h-auto max-w-[600px] mx-auto' />
           </div>
         </div>
       </div>
