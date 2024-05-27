@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dendritic-web/static/css/main.526d3845.css",
-    "main.js": "/dendritic-web/static/js/main.58579041.js",
+    "main.css": "/dendritic-web/static/css/main.5074154d.css",
+    "main.js": "/dendritic-web/static/js/main.5996a1c0.js",
     "index.html": "/dendritic-web/index.html",
-    "main.526d3845.css.map": "/dendritic-web/static/css/main.526d3845.css.map",
-    "main.58579041.js.map": "/dendritic-web/static/js/main.58579041.js.map"
+    "main.5074154d.css.map": "/dendritic-web/static/css/main.5074154d.css.map",
+    "main.5996a1c0.js.map": "/dendritic-web/static/js/main.5996a1c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.526d3845.css",
-    "static/js/main.58579041.js"
+    "static/css/main.5074154d.css",
+    "static/js/main.5996a1c0.js"
   ]
 }
