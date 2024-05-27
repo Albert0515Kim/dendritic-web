@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <div className='text-white h-screen bg-black px-8 py-16 flex items-center justify-center'>
       <div className='max-w-[1200px] mx-auto'>
-        <div className='flex items-center space-x-16'>
+        <div className='flex items-center space-x-8'>
           <div className='flex-1'>
             <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 whitespace-nowrap'>
               Dendritic Learning
@@ -17,7 +17,7 @@ const Landing = () => {
             </button>
           </div>
           <div>
-            <img src='./LandingImg.png' alt='Landing' className='w-full h-auto max-w-[600px]' />
+            <img src='./dendritic-web/LandingImg.png' alt='Landing' className='w-full h-auto max-w-[600px]' />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const Write = () => {
           <p className='leading-8 text-sm '>  
             and topics that may require more hands-on learning</p> 
         </div>
-        <img className='w-[500px] mx-auto my-4' src='./Write.png' alt='/' />
+        <img className='w-[500px] mx-auto my-4' src='./dendritic-web/Write.png' alt='/' />
       </div>
     </div>
   );
