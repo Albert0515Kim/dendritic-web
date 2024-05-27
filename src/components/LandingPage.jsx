@@ -1,4 +1,6 @@
 import React from 'react';
+import App from '../assets/App.png';
+
 
 const Landing = () => {
   return (
@@ -17,7 +19,7 @@ const Landing = () => {
             </button>
           </div>
           <div>
-            <img src='./dendritic-web/LandingImg.png' alt='Landing' className='w-full h-auto max-w-[600px]' />
+            <img src={App} className='w-full h-auto max-w-[600px]' />
           </div>
         </div>
       </div>
