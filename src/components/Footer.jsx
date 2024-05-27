@@ -10,10 +10,10 @@ const Footer = () => {
           Dendritic Learning is <strong>Made by Students for Students</strong>. We aspire to achieve a study app that is effective, accessible, and engaging for students.
         </p>
         <div className='flex space-x-6 my-6'>
-          <a href='https://github.com' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
+          <a href='https://github.com/Albert0515Kim/dendritic-web' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
             <FaGithubSquare size={30} />
           </a>
-          <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
+          <a href='https://www.linkedin.com/company/dendriticlearning/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
             <FaLinkedin size={30} />
           </a>
         </div>
