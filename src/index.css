@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Lil Grotesk';
+  src: url('/src/assets/LilGrotesk[wght].ttf') format('truetype');
+}
+
 body {
   background-color: #000300;
+  font-family: 'Lil Grotesk';
 }
