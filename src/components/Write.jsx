@@ -9,12 +9,9 @@ const Write = () => {
         <div className='flex flex-col justify-center'>
           <p className='text-[#00df9a] font-bold '>WRITE</p>
           <h1 className='md:text-3xl sm:text-3xl leading-5 text-2xl font-bold py-2 whitespace-nowrap'>Build A Mind Muscle Connection</h1>
-          <p className='leading-8 text-sm '>
-            Dendritic features a <strong>Write</strong> feature giving users the option</p>
-          <p className='leading-8 text-sm '>    
-            to write out their responses, improving retention in subjects</p>
-          <p className='leading-8 text-sm '>  
-            and topics that may require more hands-on learning</p> 
+          <p className='information-text-box'>
+            Dendritic features a <strong>Write</strong> feature giving users the option to write out their responses, improving retention in subjects and topics that may require more hands-on learning.
+          </p>
         </div>
       </div>
     </div>

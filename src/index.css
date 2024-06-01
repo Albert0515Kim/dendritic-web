@@ -11,3 +11,13 @@ body {
   background-color: #000300;
   font-family: 'Lil Grotesk';
 }
+
+.information-text-box {
+  max-width: 400px;
+  padding: 10px;
+  /* border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9; */
+  margin-top: 10px;
+  padding-left: 0;
+}
