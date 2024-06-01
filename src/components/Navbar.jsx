@@ -20,8 +20,11 @@ const Navbar = () => {
       <div onClick={handleNav} className='block md:hidden'>
         {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
       </div>
-      <ul className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-black ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
-      <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48 padding-top-bottom-10' />
+      <ul className={nav ? 'fixed top-0 left-0 w-full h-[60%] border-b border-b-gray-900 bg-black ease-in-out duration-500' : 'ease-in-out duration-500 fixed top-[-100%] left-0'}>
+        <div className='flex justify-between items-center p-4'>
+          <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48' />
+          <AiOutlineClose size={20} onClick={handleNav} className='text-white cursor-pointer' />
+        </div>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>Home</li>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>About</li>
         <li className='p-4 hover:text-gray-400'>Contact</li>
