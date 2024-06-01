@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/dendritic-web/static/css/main.1e22d822.css",
-    "main.js": "/dendritic-web/static/js/main.172d5d2d.js",
+    "main.css": "/dendritic-web/static/css/main.eb9dc80f.css",
+    "main.js": "/dendritic-web/static/js/main.7073139a.js",
+    "static/media/LilGrotesk[wght].ttf": "/dendritic-web/static/media/LilGrotesk[wght].c4b419c1c59de472bdf4.ttf",
     "static/media/App.png": "/dendritic-web/static/media/App.8c322a9e90a9ca2adccc.png",
     "static/media/Logo.png": "/dendritic-web/static/media/Logo.797161f0d96d744ceb07.png",
     "static/media/webset.png": "/dendritic-web/static/media/webset.991f788edb4092b922a9.png",
     "static/media/write.png": "/dendritic-web/static/media/write.07eb736cbe6e4a87d24e.png",
     "index.html": "/dendritic-web/index.html",
-    "main.1e22d822.css.map": "/dendritic-web/static/css/main.1e22d822.css.map",
-    "main.172d5d2d.js.map": "/dendritic-web/static/js/main.172d5d2d.js.map"
+    "main.eb9dc80f.css.map": "/dendritic-web/static/css/main.eb9dc80f.css.map",
+    "main.7073139a.js.map": "/dendritic-web/static/js/main.7073139a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e22d822.css",
-    "static/js/main.172d5d2d.js"
+    "static/css/main.eb9dc80f.css",
+    "static/js/main.7073139a.js"
   ]
 }
