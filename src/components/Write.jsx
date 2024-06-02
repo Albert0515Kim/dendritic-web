@@ -8,8 +8,8 @@ const Write = () => {
         <img  className='w-full max-w-[500px] my-4 mx-auto md:my-0 md:mx-0 md:order-last'src={write} alt='write'/>
         <div className='flex flex-col justify-center'>
           <p className='text-[#00df9a] font-bold '>WRITE</p>
-          <h1 className='md:text-3xl sm:text-3xl leading-5 text-2xl font-bold py-2 whitespace-nowrap'>Build A Mind Muscle Connection</h1>
-          <div className='leading-8 text-sm flex flex-col justify-between'>
+          <h1 className='md:text-3xl sm:text-xl leading-5 text-xl font-bold py-2 whitespace-nowrap'>Build A Mind Muscle Connection</h1>
+          <div className='leading-8 text-xs md:text-sm md:leading-8 flex flex-col justify-between'>
             <p>
               Dendritic features a <strong>Write</strong> feature giving users the option
             </p>
