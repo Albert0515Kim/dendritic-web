@@ -1,5 +1,5 @@
 import React from 'react';
-import write from '../assets/write.png  ';
+import write from '../assets/write.png';
 
 const Write = () => {
   return (

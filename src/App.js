@@ -10,12 +10,12 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Landing />
-      <WebSets />
+      <Landing id="home"/>
+      <WebSets id="about"/>
       <Write />
-      <Newsletter />
+      <Newsletter id="contact"/>
       <Footer />
-    </div>
+      </div>
   );
 }
 

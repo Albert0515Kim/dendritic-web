@@ -1,9 +1,9 @@
 import React from 'react';
 import webset from '../assets/webset.png';
 
-const WebSets = () => {
+const WebSets = ({about}) => {
   return (
-    <div className='w-full bg-white py-16 px-4'>
+    <div id="about" className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
         <img className='w-[500px] mx-auto my-4' src={webset} alt='WebSets' />
         <div className='flex flex-col justify-center'>
