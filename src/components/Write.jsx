@@ -1,5 +1,5 @@
 import React from 'react';
-import write from '../assets/write.png';
+import write from '../assets/write.png  ';
 
 const Write = () => {
   return (
@@ -9,12 +9,17 @@ const Write = () => {
         <div className='flex flex-col justify-center'>
           <p className='text-[#00df9a] font-bold '>WRITE</p>
           <h1 className='md:text-3xl sm:text-3xl leading-5 text-2xl font-bold py-2 whitespace-nowrap'>Build A Mind Muscle Connection</h1>
-          <p className='leading-8 text-sm '>
-            Dendritic features a <strong>Write</strong> feature giving users the option</p>
-          <p className='leading-8 text-sm '>    
-            to write out their responses, improving retention in subjects</p>
-          <p className='leading-8 text-sm '>  
-            and topics that may require more hands-on learning</p> 
+          <div className='leading-8 text-sm flex flex-col justify-between h-[120px]'>
+            <p>
+              Dendritic features a <strong>Write</strong> feature giving users the option
+            </p>
+            <p>
+              to write out their responses, improving retention in subjects
+            </p>
+            <p>
+              and topics that may require more hands-on learning
+            </p>
+          </div>
         </div>
       </div>
     </div>

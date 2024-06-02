@@ -9,15 +9,17 @@ const WebSets = () => {
         <div className='flex flex-col justify-center'>
           <p className='text-[#00df9a] font-bold '>WEB SETS</p>
           <h1 className='md:text-3xl sm:text-3xl leading-5 text-2xl font-bold py-2 whitespace-nowrap'>Break Away From Linear Learning</h1>
-          <p className='leading-8 text-sm '>
-            Dendritic features its very own <strong>Web Sets</strong> allowing users to make
-          </p>
-          <p className='leading-8 text-sm '>    
-            connections between various topics, breaking away from the traditional 
-          </p>
-          <p className='leading-8 text-sm '>  
-            linear learning methods of term and definition flashcards.
-          </p> 
+          <div className='leading-8 text-sm flex flex-col justify-between h-[120px]'>
+            <p>
+              Dendritic features its very own <strong>Web Sets</strong> allowing users to make
+            </p>
+            <p>
+              connections between various topics, breaking away from the traditional 
+            </p>
+            <p>
+              linear learning methods of term and definition flashcards.
+            </p>
+          </div>
         </div>
       </div>
     </div>
