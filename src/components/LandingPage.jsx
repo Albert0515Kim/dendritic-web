@@ -42,10 +42,10 @@ const Landing = ({ home }) => {
         <div className="relative flex flex-col items-center sm:mt-[400px] mt-[200px]" style={{ zIndex: 2 }}>
           <div className="flex flex-col md:flex-row items-center md:space-x-16">
             <div
-              className="w-full max-w-[200px] sm:max-w-[300px] md:max-w-[200px] lg:max-w-[400px]"
+              className="w-full max-w-[150px] sm:max-w-[150px] md:max-w-[300px] lg:max-w-[400px]"
               style={{ transform: parallaxOffset(multiplier.logo) }}
             >
-              <img src={svgLogo} className="w-24 h-24 sm:w-full sm:h-auto mx-auto" />
+              <img src={svgLogo} className="w-full h-auto mx-auto" />
             </div>
             <div className="flex-1 text-center md:text-left mt-4 sm:mt-8 md:mt-0" style={{ transform: parallaxOffset(multiplier.text) }}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold py-4 whitespace-nowrap">
