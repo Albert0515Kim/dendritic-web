@@ -51,7 +51,7 @@ const Landing = ({home}) => {
               <p className='text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-500'>
                 Revolutionize the way you learn
               </p>
-              <button className='bg-[#00df9a] w-[140px] sm:w-[170px] rounded-md font-medium my-6 py-2 sm:py-3 text-black'>
+              <button  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className='bg-[#00df9a] w-[140px] sm:w-[170px] rounded-md font-medium my-6 py-2 sm:py-3 text-black'>
                 Start Learning More
               </button>
             </div>
