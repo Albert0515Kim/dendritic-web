@@ -39,10 +39,10 @@ const Landing = ({ home }) => {
         <div className="absolute inset-x-0 top-0 transform translate-y-[-20%] items-center" style={{ zIndex: 1 }}>
           <img src={fadedMockup} className="w-full mx-auto h-auto md:max-w-[1200px]" />
         </div>
-        <div className="relative flex flex-col items-center sm:mt-[400px] mt-[200px]" style={{ zIndex: 2 }}>
+        <div className="relative flex flex-col items-center lg:mt-[400px] md:mt-[300px] mt-[150px]" style={{ zIndex: 2 }}>
           <div className="flex flex-col md:flex-row items-center md:space-x-16">
             <div
-              className="w-full max-w-[150px] sm:max-w-[150px] md:max-w-[300px] lg:max-w-[400px]"
+              className="w-full max-w-[150px] sm:max-w-[150px] md:max-w-[200px] lg:max-w-[400px]"
               style={{ transform: parallaxOffset(multiplier.logo) }}
             >
               <img src={svgLogo} className="w-full h-auto mx-auto" />
