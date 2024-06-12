@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dendritic-web/static/css/main.53276ecf.css",
-    "main.js": "/dendritic-web/static/js/main.30890ed4.js",
+    "main.css": "/dendritic-web/static/css/main.94e8cf98.css",
+    "main.js": "/dendritic-web/static/js/main.073e856e.js",
     "static/media/faded-mockup.png": "/dendritic-web/static/media/faded-mockup.31afa021ab45c064612c.png",
     "static/media/LilGrotesk[wght].ttf": "/dendritic-web/static/media/LilGrotesk[wght].c4b419c1c59de472bdf4.ttf",
     "static/media/Logo.png": "/dendritic-web/static/media/Logo.797161f0d96d744ceb07.png",
@@ -9,11 +9,11 @@
     "static/media/write.png": "/dendritic-web/static/media/write.07eb736cbe6e4a87d24e.png",
     "static/media/DendriticLearning_icon_transparent.svg": "/dendritic-web/static/media/DendriticLearning_icon_transparent.965edc7e1fd28d9557c4b25ba1e8ba6d.svg",
     "index.html": "/dendritic-web/index.html",
-    "main.53276ecf.css.map": "/dendritic-web/static/css/main.53276ecf.css.map",
-    "main.30890ed4.js.map": "/dendritic-web/static/js/main.30890ed4.js.map"
+    "main.94e8cf98.css.map": "/dendritic-web/static/css/main.94e8cf98.css.map",
+    "main.073e856e.js.map": "/dendritic-web/static/js/main.073e856e.js.map"
   },
   "entrypoints": [
-    "static/css/main.53276ecf.css",
-    "static/js/main.30890ed4.js"
+    "static/css/main.94e8cf98.css",
+    "static/js/main.073e856e.js"
   ]
 }
