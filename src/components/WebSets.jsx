@@ -24,7 +24,7 @@ const WebSets = ({ about }) => {
   useEffect(() => {
     if (showTitle) {
       titleControls.start({ 
-        transition: { delay: 0.2, duration: 2 },
+        transition: { delay: 0.2, duration: 1 },
         opacity: 1 
       });
     }
@@ -33,7 +33,7 @@ const WebSets = ({ about }) => {
   useEffect(() => {
     if (showParagraphs) {
       paragraphControls.start({ 
-        transition: { delay: 0.5, duration: 2 },
+        transition: { delay: 0.3, duration: 1 },
         opacity: 1 
       });
     }
@@ -44,7 +44,7 @@ const WebSets = ({ about }) => {
       imageControls.start({ 
         opacity: 1,
         x: 0,
-        transition: { delay: 1, duration: 1, ease: 'easeInOut' }
+        transition: { delay: 0.6, duration: 1, ease: 'easeInOut' }
       });
     }
   }, [showImage, imageControls]);
@@ -56,7 +56,7 @@ const WebSets = ({ about }) => {
           className="w-full max-w-[500px] mx-auto my-4"
           src={webset}
           alt="WebSets"
-          initial={{ opacity: 0, x: '-25%' }}
+          initial={{ opacity: 0, x: '-10%' }}
           animate={imageControls}
         />
         <div className="flex flex-col justify-center">
