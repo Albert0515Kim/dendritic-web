@@ -56,7 +56,7 @@ const WebSets = ({ about }) => {
           className="w-full max-w-[500px] mx-auto my-4"
           src={webset}
           alt="WebSets"
-          initial={{ opacity: 0, x: '-70%' }}
+          initial={{ opacity: 0, x: '-25%' }}
           animate={imageControls}
         />
         <div className="flex flex-col justify-center">

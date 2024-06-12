@@ -51,12 +51,12 @@ const Write = () => {
 
   return (
     <div className="w-full bg-white py-16 px-4">
-      <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-x-4 md:gap-x-0 md:pr-8 md:pl-8">
+      <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-x-4 md:gap-x-0 md:pr-12 md:pl-12">
         <motion.img
           className="w-full max-w-[500px] my-4 mx-auto md:my-0 md:mx-0 md:order-last"
           src={write}
           alt="write"
-          style={{ opacity: 0, x: '70%' }}
+          style={{ opacity: 0, x: '25%' }}
           animate={imageControls}
         />
         <div className="flex flex-col justify-center">
