@@ -43,7 +43,7 @@ const Landing = ({ home }) => {
         <div className="relative flex flex-col items-center lg:mt-[25rem] md:mt-[15rem] mt-[12rem]" style={{ zIndex: 2 }}>
           <div className="flex flex-col md:flex-row items-center md:space-x-16"style={{ transform: parallaxOffset(multiplier.logo) }}>
             <motion.div
-              className="w-full max-w-[10rem] sm:max-w-[10rem] md:max-w-[15rem] lg:max-w-[30rem]"
+              className="w-full max-w-[10rem] sm:max-w-[10rem] lg:max-w-[15rem]"
               initial={{ opacity: 0, x: -100, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
