@@ -84,7 +84,7 @@ const Landing = ({ home }) => {
           transition={{ delay: 2.5, duration: 0.8 }}
           className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light text-white"
         >
-          Winner of the 2024 Congressional App Challenge
+          {/* Winner of the 2024 Congressional App Challenge */}
         </motion.h2>
         <motion.img
           src={medalIcon}
