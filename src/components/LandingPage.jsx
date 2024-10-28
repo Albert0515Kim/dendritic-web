@@ -100,7 +100,7 @@ const Landing = ({ home }) => {
           transition={{ delay: 3, duration: 0.8 }}
           className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light text-white"
         >
-          Winner of the D214 App Showcase
+          Winner of 2024 D214 App Showcase
         </motion.h2>
       </div>
     </div>
