@@ -17,6 +17,11 @@ const Dashboard = () => {
         <h1 className="text-xl font-bold">Welcome {user.email}</h1>
         <button className="text-blue-500" onClick={() => { logout(); navigate('/'); }}>Log Out</button>
       </div>
+      {user.isMember ? (
+        <p className="mb-4 text-green-400">Premium Member</p>
+      ) : (
+        <Link className="underline" to="/subscribe">Become a Member</Link>
+      )}
       <Link className="underline" to="/create">Create New Set</Link>
       <h2 className="mt-4 font-semibold">My Sets</h2>
       <ul className="mb-4">
