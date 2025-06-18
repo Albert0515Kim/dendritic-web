@@ -23,7 +23,7 @@ const FlashcardViewer = () => {
   };
 
   return (
-    <div className="p-4 max-w-xl mx-auto text-center">
+    <div className="p-4 max-w-xl mx-auto text-center text-white">
       <Link className="underline" to="/dashboard">Back to Dashboard</Link>
       <h1 className="text-xl font-bold my-4">{set.title}</h1>
       <div

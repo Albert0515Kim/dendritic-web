@@ -12,13 +12,14 @@ const Dashboard = () => {
   const publicSets = sets.filter((s) => s.isPublic);
 
   return (
-    <div className="p-4 max-w-2xl mx-auto">
+    
+    <div className="p-4 max-w-2xl mx-auto backdrop">
       <div className="flex justify-between mb-4">
-        <h1 className="text-xl font-bold">Welcome {user.email}</h1>
+        <h1 className="text-xl font-bold text-white">Welcome {user.email}</h1>
         <button className="text-blue-500" onClick={() => { logout(); navigate('/'); }}>Log Out</button>
       </div>
-      <Link className="underline" to="/create">Create New Set</Link>
-      <h2 className="mt-4 font-semibold">My Sets</h2>
+      <Link className="underline text-white" to="/create">Create New Set</Link>
+      <h2 className="mt-4 font-semibold text-white">My Sets</h2>
       <ul className="mb-4">
         {mySets.map((set) => (
           <li key={set.id} className="flex justify-between border-b py-1">
@@ -27,7 +28,7 @@ const Dashboard = () => {
           </li>
         ))}
       </ul>
-      <h2 className="font-semibold">Public Sets</h2>
+      <h2 className="font-semibold text-white">Public Sets</h2>
       <ul>
         {publicSets.map((set) => (
           <li key={set.id} className="border-b py-1">
