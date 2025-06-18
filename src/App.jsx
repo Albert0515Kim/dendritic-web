@@ -11,6 +11,8 @@ import Dashboard from './components/Dashboard';
 import FlashcardSetForm from './components/FlashcardSetForm';
 import FlashcardViewer from './components/FlashcardViewer';
 import PrivateRoute from './components/PrivateRoute';
+import SubscribePage from './components/SubscribePage';
+import SubscribeSuccess from './components/SubscribeSuccess';
 import { AuthProvider } from './context/AuthContext';
 import { SetsProvider } from './context/SetsContext';
 
@@ -57,6 +59,8 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route path="/subscribe" element={<SubscribePage />} />
+            <Route path="/subscribe-success" element={<SubscribeSuccess />} />
           </Routes>
         </SetsProvider>
       </AuthProvider>

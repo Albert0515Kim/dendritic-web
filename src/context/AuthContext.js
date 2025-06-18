@@ -22,9 +22,9 @@ export const AuthProvider = ({ children }) => {
   const signup = (email, password) => {
     const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
     if (users[email]) throw new Error('User already exists');
-    users[email] = { email, password };
+    users[email] = { email, password, isMember: false };
     localStorage.setItem(USERS_KEY, JSON.stringify(users));
-    setUser({ email });
+    setUser({ email, isMember: false });
   };
 
   const login = (email, password) => {
@@ -32,13 +32,27 @@ export const AuthProvider = ({ children }) => {
     if (!users[email] || users[email].password !== password) {
       throw new Error('Invalid credentials');
     }
-    setUser({ email });
+    const { isMember = false } = users[email];
+    setUser({ email, isMember });
   };
 
   const logout = () => setUser(null);
 
+  const updateMembership = () => {
+    setUser((u) => {
+      if (!u) return u;
+      const updated = { ...u, isMember: true };
+      const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
+      if (users[u.email]) {
+        users[u.email].isMember = true;
+        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+      }
+      return updated;
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ user, signup, login, logout }}>
+    <AuthContext.Provider value={{ user, signup, login, logout, updateMembership }}>
       {children}
     </AuthContext.Provider>
   );

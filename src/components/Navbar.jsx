@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Logo from '../assets/Logo.png';
 
@@ -27,6 +28,9 @@ const Navbar = () => {
         <li className='p-4 hover:text-gray-400'>
           <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
         </li>
+        <li className='p-4 hover:text-gray-400'>
+          <Link to="/subscribe">Subscribe</Link>
+        </li>
       </ul>
       <div onClick={handleNav} className='block md:hidden z-20'>
         {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
@@ -44,6 +48,9 @@ const Navbar = () => {
         </li>
         <li className='p-4 hover:text-gray-400'>
           <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+        </li>
+        <li className='p-4 hover:text-gray-400'>
+          <Link to="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
         </li>
       </ul>
     </div>
