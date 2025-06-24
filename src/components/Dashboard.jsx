@@ -18,10 +18,8 @@ const Dashboard = () => {
         <h1 className="text-xl font-bold text-white">Welcome {user.email}</h1>
         <button className="text-blue-500" onClick={() => { logout(); navigate('/'); }}>Log Out</button>
       </div>
-<<<<<<< HEAD
       <Link className="underline text-white" to="/create">Create New Set</Link>
       <h2 className="mt-4 font-semibold text-white">My Sets</h2>
-=======
       {user.isMember ? (
         <p className="mb-4 text-green-400">Premium Member</p>
       ) : (
@@ -29,7 +27,6 @@ const Dashboard = () => {
       )}
       <Link className="underline" to="/create">Create New Set</Link>
       <h2 className="mt-4 font-semibold">My Sets</h2>
->>>>>>> 63c0266593b52a885d8041cf991902c4c9b2239a
       <ul className="mb-4">
         {mySets.map((set) => (
           <li key={set.id} className="flex justify-between border-b py-1">

@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
         <div className='flex space-x-6 my-6'>
           <a href='https://github.com/Albert0515Kim/dendritic-web' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
-            <FaGithubSquare size={30} />
+            <FaGithubSquare size={30} />  
           </a>
           <a href='https://www.linkedin.com/company/dendriticlearning/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
             <FaLinkedin size={30} />
