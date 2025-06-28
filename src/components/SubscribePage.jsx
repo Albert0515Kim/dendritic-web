@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SubscribePage = () => {
-  // Replace these with your real Stripe payment link URLs
+  
   const monthlyUrl = 'https://buy.stripe.com/test_monthly';
   const yearlyUrl = 'https://buy.stripe.com/test_yearly';
   const navigate = useNavigate();

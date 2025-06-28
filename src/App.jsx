@@ -39,6 +39,7 @@ function App() {
               path="/dashboard"
               element={
                 <PrivateRoute>
+                  <Navbar />
                   <Dashboard />
                 </PrivateRoute>
               }
@@ -47,6 +48,7 @@ function App() {
               path="/create"
               element={
                 <PrivateRoute>
+                  <Navbar />
                   <FlashcardSetForm />
                 </PrivateRoute>
               }
@@ -55,11 +57,14 @@ function App() {
               path="/study/:setId"
               element={
                 <PrivateRoute>
+                  <Navbar />
                   <FlashcardViewer />
                 </PrivateRoute>
               }
             />
-            <Route path="/subscribe" element={<SubscribePage />} />
+            <Route path="/subscribe" element={
+              <><Navbar /><SubscribePage /></>
+              } />
             <Route path="/subscribe-success" element={<SubscribeSuccess />} />
           </Routes>
         </SetsProvider>
