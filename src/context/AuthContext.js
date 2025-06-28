@@ -1,54 +1,46 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { auth, db } from '../firebase';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from 'firebase/auth';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const AuthContext = createContext(null);
 
-const USERS_KEY = 'mvp_users';
-const CURRENT_KEY = 'mvp_current_user';
-
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(() => {
-    const raw = localStorage.getItem(CURRENT_KEY);
-    return raw ? JSON.parse(raw) : null;
-  });
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    if (user) {
-      localStorage.setItem(CURRENT_KEY, JSON.stringify(user));
-    } else {
-      localStorage.removeItem(CURRENT_KEY);
-    }
-  }, [user]);
-
-  const signup = (email, password) => {
-    const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
-    if (users[email]) throw new Error('User already exists');
-    users[email] = { email, password, isMember: false };
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
-    setUser({ email, isMember: false });
-  };
-
-  const login = (email, password) => {
-    const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
-    if (!users[email] || users[email].password !== password) {
-      throw new Error('Invalid credentials');
-    }
-    const { isMember = false } = users[email];
-    setUser({ email, isMember });
-  };
-
-  const logout = () => setUser(null);
-
-  const updateMembership = () => {
-    setUser((u) => {
-      if (!u) return u;
-      const updated = { ...u, isMember: true };
-      const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
-      if (users[u.email]) {
-        users[u.email].isMember = true;
-        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+    const unsub = onAuthStateChanged(auth, async (fbUser) => {
+      if (fbUser) {
+        const ref = doc(db, 'users', fbUser.uid);
+        const snap = await getDoc(ref);
+        const data = snap.exists() ? snap.data() : { isMember: false };
+        setUser({ uid: fbUser.uid, email: fbUser.email, isMember: data.isMember });
+      } else {
+        setUser(null);
       }
-      return updated;
     });
+    return unsub;
+  }, []);
+
+  const signup = async (email, password) => {
+    const cred = await createUserWithEmailAndPassword(auth, email, password);
+    await setDoc(doc(db, 'users', cred.user.uid), { isMember: false });
+  };
+
+  const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
+
+  const logout = () => signOut(auth);
+
+  const updateMembership = async () => {
+    if (user) {
+      await setDoc(doc(db, 'users', user.uid), { isMember: true }, { merge: true });
+      setUser({ ...user, isMember: true });
+    }
   };
 
   return (
