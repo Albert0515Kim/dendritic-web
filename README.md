@@ -4,19 +4,25 @@ A simple flashcard application with optional premium membership. Users can creat
 
 ## Quick Start
 
-1. Install dependencies
+1. Install frontend dependencies
    ```bash
+   cd frontend
    npm install
    ```
-2. Copy `.env.example` to `.env` and fill in your keys.
+2. Copy `frontend/.env.example` to `frontend/.env` and fill in your keys.
 3. Start the development server
    ```bash
    npm start
    ```
+4. Install backend dependencies
+   ```bash
+   cd ../backend/functions
+   npm install
+   ```
 
 ## Environment Variables
 
-The application expects the following variables at build time:
+The application expects the following variables at build time in `frontend/.env`:
 
 - `REACT_APP_FIREBASE_API_KEY`
 - `REACT_APP_FIREBASE_AUTH_DOMAIN`
@@ -35,12 +41,12 @@ firebase functions:config:set stripe.secret="YOUR_SECRET_KEY" stripe.webhook="YO
 
 ## Firebase Functions
 
-The `functions` directory contains two HTTPS functions:
+The `backend/functions` directory contains two HTTPS functions:
 
 - `createCheckoutSession` – creates a Stripe Checkout session for subscriptions.
 - `stripeWebhook` – handles webhook events to mark a user as a member in Firestore.
 
-Deploy them with:
+Deploy them from the `backend` directory with:
 
 ```bash
 firebase deploy --only functions
