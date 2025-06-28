@@ -6,6 +6,7 @@ const SubscribePage = () => {
   const yearlyPriceId = process.env.REACT_APP_STRIPE_YEARLY_PRICE_ID;
   const { user } = useAuth();
 
+
   const handleCheckout = async (priceId) => {
     try {
       const response = await fetch('/createCheckoutSession', {

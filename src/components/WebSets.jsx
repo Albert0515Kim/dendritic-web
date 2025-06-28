@@ -24,7 +24,7 @@ const WebSets = ({ about }) => {
   useEffect(() => {
     if (showTitle) {
       titleControls.start({ 
-        transition: { delay: 0.2, duration: 0.5 },
+        transition: { delay: 0.2, duration: 0.4 },
         opacity: 1 
       });
     }
@@ -33,7 +33,7 @@ const WebSets = ({ about }) => {
   useEffect(() => {
     if (showParagraphs) {
       paragraphControls.start({ 
-        transition: { delay: 0.3, duration: 0.5 },
+        transition: { delay: 0.3, duration: 0.4 },
         opacity: 1 
       });
     }
@@ -44,7 +44,7 @@ const WebSets = ({ about }) => {
       imageControls.start({ 
         opacity: 1,
         x: 0,
-        transition: { delay: 0.4, duration: 0.5, ease: 'easeInOut' }
+        transition: { delay: 0.4, duration: 0.4, ease: 'easeInOut' }
       });
     }
   }, [showImage, imageControls]);
