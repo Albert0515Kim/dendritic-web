@@ -25,8 +25,6 @@ const Dashboard = () => {
       ) : (
         <Link className="underline" to="/subscribe">Become a Member</Link>
       )}
-      <Link className="underline" to="/create">Create New Set</Link>
-      <h2 className="mt-4 font-semibold">My Sets</h2>
       <ul className="mb-4">
         {mySets.map((set) => (
           <li key={set.id} className="flex justify-between border-b py-1">
