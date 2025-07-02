@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSets } from '../context/SetsContext';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const FlashcardSetForm = () => {
   const { createSet } = useSets();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -21,7 +21,7 @@ const FlashcardSetForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = createSet({ title, description, isPublic, cards });
-    navigate(`/study/${id}`);
+    router.push(`/study/${id}`);
   };
 
   return (

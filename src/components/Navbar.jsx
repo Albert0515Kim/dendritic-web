@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Logo from '../assets/Logo.png';
 
@@ -29,7 +29,7 @@ const Navbar = () => {
           <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/subscribe">Subscribe</Link>
+          <Link href="/subscribe">Subscribe</Link>
         </li>
       </ul>
       <div onClick={handleNav} className='block md:hidden z-20'>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
+          <Link href="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
         </li>
       </ul>
     </div>

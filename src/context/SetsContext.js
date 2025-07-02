@@ -7,12 +7,15 @@ const SETS_KEY = 'mvp_sets';
 export const SetsProvider = ({ children }) => {
   const { user } = useAuth();
   const [sets, setSets] = useState(() => {
+    if (typeof window === 'undefined') return [];
     const raw = localStorage.getItem(SETS_KEY);
     return raw ? JSON.parse(raw) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem(SETS_KEY, JSON.stringify(sets));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(SETS_KEY, JSON.stringify(sets));
+    }
   }, [sets]);
 
   const createSet = (data) => {

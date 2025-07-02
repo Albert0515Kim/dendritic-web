@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const AuthPage = () => {
-  const { signup, login } = useAuth();
+  const { signup, login, loginWithGoogle } = useAuth();
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +18,7 @@ const AuthPage = () => {
       } else {
         login(email, password);
       }
-      navigate('/dashboard');
+      router.push('/dashboard');
     } catch (err) {
       setError(err.message);
     }
@@ -43,6 +43,20 @@ const AuthPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <button
+          type="button"
+          className="bg-red-500 text-white px-4 py-2 w-full mb-2"
+          onClick={async () => {
+            try {
+              await loginWithGoogle();
+              router.push('/dashboard');
+            } catch (err) {
+              setError(err.message);
+            }
+          }}
+        >
+          Sign in with Google
+        </button>
         <button className="bg-black text-white px-4 py-2 w-full" type="submit">
           {isSignup ? 'Sign Up' : 'Log In'}
         </button>
