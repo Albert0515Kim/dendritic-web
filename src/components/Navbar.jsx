@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Logo from '../assets/Logo.png';
 
@@ -20,13 +20,16 @@ const Navbar = () => {
       <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
       <ul className='hidden md:flex z-10'>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/">Home</Link>
+          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/about">About</Link>
+          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/subscribe">Subscribe</Link>
+          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+        </li>
+        <li className='p-4 hover:text-gray-400'>
+          <Link href="/subscribe">Subscribe</Link>
         </li>
       </ul>
       <div onClick={handleNav} className='block md:hidden z-20'>
@@ -38,13 +41,16 @@ const Navbar = () => {
           <AiOutlineClose size={20} onClick={handleNav} className='text-white cursor-pointer' />
         </div>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <Link to="/" onClick={() => setNav(false)}>Home</Link>
+          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
         </li>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <Link to="/about" onClick={() => setNav(false)}>About</Link>
+          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <Link to="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
+          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+        </li>
+        <li className='p-4 hover:text-gray-400'>
+          <Link href="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
         </li>
       </ul>
     </div>

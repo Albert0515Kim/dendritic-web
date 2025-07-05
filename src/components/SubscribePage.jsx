@@ -2,8 +2,8 @@ import React from 'react';
 import { useAuth } from '../context/AuthContext';
 
 const SubscribePage = () => {
-  const monthlyPriceId = process.env.REACT_APP_STRIPE_MONTHLY_PRICE_ID;
-  const yearlyPriceId = process.env.REACT_APP_STRIPE_YEARLY_PRICE_ID;
+  const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID;
+  const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID;
   const { user } = useAuth();
 
 

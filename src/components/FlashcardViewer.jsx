@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useSets } from '../context/SetsContext';
 
-const FlashcardViewer = () => {
-  const { setId } = useParams();
+const FlashcardViewer = ({ setId: propId }) => {
+  const router = useRouter();
+  const setId = propId || router.query.setId;
   const { sets } = useSets();
   const set = sets.find((s) => s.id === Number(setId));
   const [index, setIndex] = useState(0);
@@ -24,7 +26,7 @@ const FlashcardViewer = () => {
 
   return (
     <div className="p-4 max-w-xl mx-auto text-center text-white">
-      <Link className="underline" to="/dashboard">Back to Dashboard</Link>
+      <Link className="underline" href="/dashboard">Back to Dashboard</Link>
       <h1 className="text-xl font-bold my-4">{set.title}</h1>
       <div
         className="border h-40 flex items-center justify-center cursor-pointer mb-4"
