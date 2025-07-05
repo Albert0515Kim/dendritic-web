@@ -20,13 +20,10 @@ const Navbar = () => {
       <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
       <ul className='hidden md:flex z-10'>
         <li className='p-4 hover:text-gray-400'>
-          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
-        </li>
-        <li className='p-4 hover:text-gray-400'>
-          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+          <Link to="/about">About</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
           <Link to="/subscribe">Subscribe</Link>
@@ -41,13 +38,10 @@ const Navbar = () => {
           <AiOutlineClose size={20} onClick={handleNav} className='text-white cursor-pointer' />
         </div>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
+          <Link to="/" onClick={() => setNav(false)}>Home</Link>
         </li>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
-        </li>
-        <li className='p-4 hover:text-gray-400'>
-          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+          <Link to="/about" onClick={() => setNav(false)}>About</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
           <Link to="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
