@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import svgLogo from '../assets/DendriticLearning_icon_transparent.svg';
-import fadedMockup from '../assets/faded-mockup.png';
-import medalIcon from '../assets/medal.svg'; // Make sure to import your medal icon
 import { motion, useAnimation } from 'framer-motion';
+
+const svgLogo = '/DendriticLearning_icon_transparent.svg';
+const fadedMockup = '/faded-mockup.png';
+const medalIcon = '/medal.svg';
 
 const Landing = ({ home }) => {
   const [scrollY, setScrollY] = useState(0);

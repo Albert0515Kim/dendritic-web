@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import write from '../assets/write.png';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+
+const write = '/Write.png';
 
 const Write = () => {
   const [isVisible, titleRef] = useIntersectionObserver({ threshold: 0.1 });

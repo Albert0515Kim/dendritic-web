@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Lil Grotesk';
-  src: url('/src/assets/LilGrotesk[wght].ttf') format('truetype');
+  src: url('/LilGrotesk[wght].ttf') format('truetype');
 }
 
 body {

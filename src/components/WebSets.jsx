@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import webset from '../assets/webset.png';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+
+const webset = '/webset.png';
 
 const WebSets = ({ about }) => {
   const [isVisible, titleRef] = useIntersectionObserver({ threshold: 0.1 });
