@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import Logo from '../assets/Logo.png';
+import Logo from './public/Logo.png'; 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -17,16 +17,13 @@ const Navbar = () => {
 
   return (
     <div className='relative w-full flex justify-between items-center h-24 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-white bg-black'>
-      <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
+      <img src={Logo.png} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
       <ul className='hidden md:flex z-10'>
         <li className='p-4 hover:text-gray-400'>
-          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
+          <Link href="/">Home</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
-        </li>
-        <li className='p-4 hover:text-gray-400'>
-          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+          <a href="/dashboard" onClick={() => handleLinkClick('contact')}>Contact</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
           <Link href="/subscribe">Subscribe</Link>
