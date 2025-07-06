@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
-import Logo from '../public/Logo.png';
+
+const logoSrc = '/Logo.png';
 
 const Footer = () => {
   return (
     <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
       <div>
-        <img src={Logo} className='w-48 h-auto' alt='Dendritic Learning' />
+        <img src={logoSrc} className='w-48 h-auto' alt='Dendritic Learning' />
         <p className='py-4'>
           Dendritic Learning is <strong>Made by Students for Students</strong>. We aspire to achieve a study app that is effective, accessible, and engaging for students.
         </p>

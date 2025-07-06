@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import Logo from './public/Logo.png'; 
+
+const logoSrc = '/Logo.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className='relative w-full flex justify-between items-center h-24 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-white bg-black'>
-      <img src={Logo.png} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
+      <img src={logoSrc} alt='Dendritic Learning' className='aspect-auto w-48 z-10'/>
       <ul className='hidden md:flex z-10'>
         <li className='p-4 hover:text-gray-400'>
           <Link href="/">Home</Link>
@@ -34,7 +35,7 @@ const Navbar = () => {
       </div>
       <ul className={nav ? 'fixed top-0 left-0 w-full h-[40%] border-b border-b-gray-900 bg-black ease-in-out duration-500 z-30' : 'ease-in-out duration-500 fixed top-[-100%] left-0 z-30'}>
         <div className='flex justify-between items-center p-4'>
-          <img src={Logo} alt='Dendritic Learning' className='aspect-auto w-48' />
+          <img src={logoSrc} alt='Dendritic Learning' className='aspect-auto w-48' />
           <AiOutlineClose size={20} onClick={handleNav} className='text-white cursor-pointer' />
         </div>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
