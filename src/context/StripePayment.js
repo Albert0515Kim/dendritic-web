@@ -53,7 +53,7 @@ export const getPortalUrl = async (app) => {
   const auth = getAuth(app);
   const user = auth.currentUser;
 
-  let dataWithUrl: any;
+  let dataWithUrl;
   try {
     const functions = getFunctions(app, "us-central1");
     const functionRef = httpsCallable(
