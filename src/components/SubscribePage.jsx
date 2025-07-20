@@ -1,7 +1,8 @@
 import React from 'react';
-import { useRouter } from 'next/Navigation';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '../context/AuthContext';
 import { getCheckoutUrl } from '../context/StripePayment';
+import app from '../firebase';
 
 
 const SubscribePage = () => {
