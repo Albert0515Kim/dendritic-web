@@ -49,7 +49,7 @@ const AuthPage = () => {
           onClick={async () => {
             try {
               await loginWithGoogle();
-              router.push('/dashboard');
+              router.push('/subscribe');
             } catch (err) {
               setError(err.message);
             }

@@ -1,28 +1,18 @@
 import React from 'react';
+import { useRouter } from 'next/Navigation';
 import { useAuth } from '../context/AuthContext';
+import { getCheckoutUrl } from '../context/StripePayment';
+
 
 const SubscribePage = () => {
   const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID;
-  const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID;
   const { user } = useAuth();
-
+  const router = useRouter();
 
   const handleCheckout = async (priceId) => {
-    try {
-      const response = await fetch('/createCheckoutSession', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ priceId, uid: user?.uid }),
-      });
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      }
-    } catch (err) {
-      console.error('Checkout error', err);
-    }
+    const checkoutUrl = await getCheckoutUrl(app, priceId);
+    router.push(checkoutUrl);
+    console.log("Upgrade to Premium");
   };
 
   return (
@@ -35,12 +25,7 @@ const SubscribePage = () => {
         >
           Monthly - $4.99
         </button>
-        <button
-          className="bg-[#00df9a] text-black rounded-md font-medium w-full px-6 py-3"
-          onClick={() => handleCheckout(yearlyPriceId)}
-        >
-          Annually - $39.99
-        </button>
+
       </div>
     </div>
   );

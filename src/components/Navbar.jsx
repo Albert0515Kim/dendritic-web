@@ -11,10 +11,7 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  const handleLinkClick = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    setNav(false);  // Close the menu after clicking a link on mobile
-  };
+
 
   return (
     <div className='relative w-full flex justify-between items-center h-24 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 text-white bg-black'>
@@ -24,7 +21,7 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <a href="/dashboard" onClick={() => handleLinkClick('contact')}>Contact</a>
+          <a href="/dashboard">Login</a>
         </li>
         <li className='p-4 hover:text-gray-400'>
           <Link href="/subscribe">Subscribe</Link>
@@ -39,13 +36,10 @@ const Navbar = () => {
           <AiOutlineClose size={20} onClick={handleNav} className='text-white cursor-pointer' />
         </div>
         <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <a href="#home" onClick={() => handleLinkClick('home')}>Home</a>
-        </li>
-        <li className='p-4 border-b border-gray-600 hover:text-gray-400'>
-          <a href="#about" onClick={() => handleLinkClick('about')}>About</a>
+          <Link href="/" onClick={() => setNav(false)}>Home</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
-          <a href="#contact" onClick={() => handleLinkClick('contact')}>Contact</a>
+          <Link href="/dashboard" onClick={() => setNav(false)}>Login</Link>
         </li>
         <li className='p-4 hover:text-gray-400'>
           <Link href="/subscribe" onClick={() => setNav(false)}>Subscribe</Link>
